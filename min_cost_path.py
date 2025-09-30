@@ -1,6 +1,7 @@
 from heapq import heappush, heappop
+from typing import List
 
-def min_cost_path(grid):
+def min_cost_path(grid: List[List[int]]) -> int:
     m, n = len(grid), len(grid[0])
     INF = 10**18
     dist = [[INF]*n for _ in range(m)]
@@ -23,7 +24,7 @@ def min_cost_path(grid):
     return -1
 
 
-def test_min_cost_path():
+def test_min_cost_path() -> None:
     """Basic tests for min_cost_path function"""
     
     # Test 1: Simple 2x2 grid
